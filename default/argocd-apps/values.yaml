@@ -34,7 +34,7 @@ argocd-apps:
         repoURL: https://github.com/smjagadish/argo_poc.git
         revision: HEAD
         directories:
-        - path: apps/*
+        - path: default/argocd-apps/apps/*
     template:
       metadata:
         name: '{{path.basename}}'
