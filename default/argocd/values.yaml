@@ -1,0 +1,7 @@
+---
+argo-cd:
+  nameOverride: argocd
+  configs:
+    params:
+      server.insecure: true
+
