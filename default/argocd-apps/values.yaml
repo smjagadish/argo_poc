@@ -77,3 +77,27 @@ argocd-apps:
           syncOptions:
           - CreateNamespace=true
 
+  - name: second-pps
+    namespace: argocd
+    generators:
+    - git:
+        repoURL: https://github.com/smjagadish/argo_poc.git
+        revision: HEAD
+        directories:
+        - path: default/second-apps/*
+    template:
+      metadata:
+        name: '{{path.basename}}'
+      spec:
+        project: "default"
+        source:
+          repoURL: https://github.com/smjagadish/argo_poc.git
+          targetRevision: HEAD
+          path: '{{path}}'
+        destination:
+          server: https://kubernetes.default.svc
+          namespace: '{{path.basename}}'
+        syncPolicy:
+          automated: {}
+          syncOptions:
+          - CreateNamespace=true
