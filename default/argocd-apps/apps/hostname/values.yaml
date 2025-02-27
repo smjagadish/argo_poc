@@ -1,5 +1,5 @@
 microservice:
-  replicaCount: 3
+  replicaCount: 2
   env:
     vars:
       APP_TITLE: "Welcome"
