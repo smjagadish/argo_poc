@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/smjagadish/your-repo.git'
+    repoURL: 'https://github.com/smjagadish/argo_poc.git'
     targetRevision: HEAD
     path: default/third-apps/
   destination:
